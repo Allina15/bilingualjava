@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Reset Verification Code</title>
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(238, 238, 238, 0.558);
+        }
+
+        .container {
+            max-width: 540px;
+            height: 360px;
+            margin: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            border: 2px solid #0137aa;
+        }
+
+        .greetings-image {
+            display: block;
+            margin: auto;
+            max-height: 5rem;
+            margin-top: 1rem;
+        }
+
+        .content {
+            text-align: center;
+            border-radius: 0 0 8px 8px;
+            font-family: "Trebuchet MS";
+            height: 11.8rem;
+        }
+
+        .verification-code {
+            background-color: #3d90b441;
+            font-size: 24px;
+            font-weight: bold;
+            color: #3d90b4;
+            margin-top: 20px;
+            width: 12rem;
+            margin: auto;
+            padding: 0.1rem;
+            border-radius: 8px;
+        }
+
+        .first-message {
+            font-size: 22px;
+            margin-top: 10px;
+            padding-top: 0.8rem;
+            color: rgb(102, 102, 102);
+        }
+
+        .second-message {
+            font-size: 16px;
+            margin-top: -9px;
+            color: rgb(102, 102, 102);
+        }
+
+        .third-message {
+            font-size: 18px;
+            color: rgba(139, 138, 138, 0.47);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img
+            src="https://bilingualsbacket.s3.ap-northeast-2.amazonaws.com/1711897265484Снимок экрана 2024-03-31 в 11.13.25.png"
+            class="greetings-image"
+    />
+
+    <div class="content">
+        <p class="first-message">
+            Your verification code for password reset is:
+        </p>
+
+        <div class="verification-code">
+            <span th:text="${code}">fddffddf</span>
+        </div>
+        <p class="third-message">(This code will expire in 3 minutes)</p>
+        <p class="second-message">
+            If you did not request this code, please ignore this email.
+        </p>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

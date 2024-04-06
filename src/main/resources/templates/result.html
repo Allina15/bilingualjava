@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;display=swap"
+            rel="stylesheet"
+    />
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 840px;
+            height: 380px;
+            max-height: 400px;
+            margin: 20px auto;
+            background-image: url("https://bilingualsbacket.s3.ap-northeast-2.amazonaws.com/1711969496008Дизайн без названия (3).png");
+            background-repeat: no-repeat;
+            border: 2px solid #0137aa;
+        }
+
+        .greeting {
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            font-size: 2.5rem;
+            color: #0137aa;
+            position: absolute;
+            top: 4.5rem;
+        }
+
+        .name {
+            font-family: fantasy;
+            color: #fca600;
+            font-size: 2rem;
+            position: absolute;
+            top: 8.6rem;
+        }
+
+        .title {
+            width: 5rem;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #959595;
+            position: absolute;
+            top: 13rem;
+        }
+
+        span {
+            color: #fca600;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            width: 20rem;
+            margin-left: 5.5%;
+            margin-bottom: 2rem;
+        }
+
+        .greetings-image {
+            width: 40%;
+        }
+
+        .logo {
+            width: 50%;
+        }
+
+        .result {
+            background-color: #fca600;
+            border-radius: 1rem;
+            border: none;
+            color: aliceblue;
+            padding: 0.4rem 1.5rem;
+            margin-right: 2rem;
+        }
+
+        .text-box {
+            margin-left: 5.5%;
+        }
+
+        .image {
+            width: 96%;
+            position: absolute;
+            left: 32rem;
+            top: 22rem;
+        }
+
+        .title {
+            width: 48%;
+        }
+
+        .button {
+            position: absolute;
+            top: 20rem;
+            margin-left: 3%;
+        }
+        .score {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #959595;
+            position: absolute;
+            top: 16.8rem;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="image-container">
+        <img
+                src="https://bilingualsbacket.s3.ap-northeast-2.amazonaws.com/Group+(4).png"
+                class="logo"
+                alt="bilingual"
+        />
+    </div>
+    <div class="text-box">
+        <h1 th:text="${greeting}" class="greeting">Good afternoon!</h1>
+        <h2 th:text="${name}" class="name"></h2>
+        <p th:text="${title}" class="title">
+            Your test English Grammar successfully <br />
+            submitted and verified
+        </p>
+        <p class="score">
+            Your score is: <span th:text="${score}">23</span> points out of
+            <span th:text="${maxScore}">100</span>
+        </p>
+    </div>
+    <div class="button">
+        <a th:href="${link}">
+            <button class="result">Go to website</button>
+        </a>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
