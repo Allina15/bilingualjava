@@ -78,6 +78,7 @@ public class AnswerServiceImpl implements AnswerService {
             }
         }
         return new SimpleResponse(HttpStatus.CREATED, "Your answer is successfully submitted");
+
     }
 
     private void saveAnswerWithoutOptions(AnswerRequest answerRequest, User user, Question question) {
